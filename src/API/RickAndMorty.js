@@ -9,7 +9,7 @@ export const getCharacters = async (characterData, pageData) => {
         });
         return data;
     }catch(err){
-        console.error("Erro" + err.message)
+        console.error("Erro" + err)
     };
  }
 
@@ -21,18 +21,18 @@ export const getCharacters = async (characterData, pageData) => {
         });
         return data;
     }catch(err){
-        console.error("Erro" + err.message)
+        console.error("Erro" + err)
     }; 
  }
 
  export const getCharacterById = async (id, characterData) => {
     try {const {data} = await  axios.get(`${BASE_URL}/character/${id}`)
         .then((res) =>{
-            characterData(res.data.results);
+            characterData(res.data);
         });
         return data;
     }catch(err){
-        console.error("Erro" + err.message)
+        console.error("Erro" + err)
     }; 
  }
 
@@ -44,7 +44,7 @@ export const getCharacters = async (characterData, pageData) => {
         });
         return data;
     }catch(err){
-        console.error("Erro" + err.message)
+        console.error("Erro" + err)
     }; 
  }
 

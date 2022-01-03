@@ -1,17 +1,22 @@
 import React from "react";
-import {
-     CardContainer,
-     CharacterImage,
-    } from "./styled";
+import {Box,
+    Image,
+    Heading,
+ } from '@chakra-ui/react'
 
 const CharacterCard = (props) => {
     return<>
-        <CardContainer>
-            <CharacterImage alt={props.name} src={props.image}/>
-            <h2>{props.name}</h2>
-            <p>{props.status}</p>
-            <p>{props.species}</p>
-        </CardContainer>
+    <Box
+      p={5}
+      shadow='md'
+      borderWidth='1px'
+      flex='1'
+      borderRadius='md'
+    >
+     <Image alt={props.name} src={props.image}/>
+      <Heading fontSize='xl'>{props.name}</Heading>
+      
+    </Box>
     </>
 }
 
